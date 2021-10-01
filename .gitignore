@@ -1,0 +1,7 @@
+
+# ignore .idea directory
+/.idea
+# ignore out directory
+/out
+# iml ignore
+algoversion2.iml
