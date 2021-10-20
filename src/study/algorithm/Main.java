@@ -6,6 +6,6 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        BOJ1918.getAnswer();
+        BOJ17103.getAnswer();
     }
 }
