@@ -11,19 +11,21 @@ public class BOJ15662 {
     public static int [] gearsHead;
     public static void rotate(int idx,int clock){
         change(idx,clock);
+        int leftclock = clock;
+        int rightclock = clock;
         for(int i= idx;i>=1;i--){
-            int preNum = getIdx(i,-clock);
+            int preNum = getIdx(gearsHead[i],-leftclock);
             if(gears[i-1][getIdx(gearsHead[i-1],2)] != gears[i][getIdx(preNum,6)]){
-                change(i-1,-clock);
-                clock = -clock;
+                change(i-1,-leftclock);
+                leftclock = -leftclock;
             }
             else break;
         }
         for(int i= idx;i<gears.length-1;i++){
-            int preNum = getIdx(i,-clock);
+            int preNum = getIdx(gearsHead[i],-rightclock);
             if(gears[i+1][getIdx(gearsHead[i+1],6)] != gears[i][getIdx(preNum,2)]){
-                change(i+1,-clock);
-                clock = -clock;
+                change(i+1,-rightclock);
+                rightclock = -rightclock;
             }
             else break;
         }
@@ -52,7 +54,7 @@ public class BOJ15662 {
             String [] s = br.readLine().split(" ");
             int idx = Integer.parseInt(s[0])-1;
             int clock = Integer.parseInt(s[1]);
-            rotate(idx,clock);
+            rotate(idx,-clock);
         }
         int answer = 0;
         for(int i=0;i<T;i++){
