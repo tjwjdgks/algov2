@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 public class BOJ16929 {
+
     public static char[][] arr;
     public static int [] dy = {0,1,0,-1};
     public static int [] dx = {1,0,-1,0};
