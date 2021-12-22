@@ -9,6 +9,6 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) throws  IOException{
-        BOJ17086.getAnswer();
+        BOJ1654.getAnswer();
     }
 }
