@@ -1,17 +1,14 @@
 package study.algorithm;
 
-import study.algorithm.BOJ.BOJ1600;
+import study.algorithm.algospot.BoggleGame;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 
 public class Main {
 
-    public static void main(String[] args) throws  IOException{
-        BOJ1600.getAnswer();
+    public static void main(String[] rgs) throws  IOException{
+        BoggleGame.getAnswer();
 
     }
 }
