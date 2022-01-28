@@ -46,6 +46,7 @@ public class BOJ14442 {
                         queue.add(new int[]{tempy,tempx,curidx[2],curidx[3]+1});
                     }
                     if(arr[tempy][tempx] ==1 && curidx[2]<K){
+                        dp[curidx[2]][tempy][tempx] = curidx[3]+1;
                         dp[curidx[2]+1][tempy][tempx] = curidx[3]+1;
                         queue.add(new int[]{tempy,tempx,curidx[2]+1,curidx[3]+1});
                     }
