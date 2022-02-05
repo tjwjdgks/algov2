@@ -7,6 +7,6 @@ import study.algorithm.PROGRAMMERS.BreakMaze;
 public class Main {
 
     public static void main(String[] rgs) throws Exception {
-        BOJ1080.getAnswer();
+        BOJ2138.getAnswer();
     }
 }
