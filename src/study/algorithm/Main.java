@@ -3,10 +3,10 @@ package study.algorithm;
 import study.algorithm.BOJ.*;
 import study.algorithm.PROGRAMMERS.BreakMaze;
 
-
 public class Main {
 
     public static void main(String[] rgs) throws Exception {
-        BOJ16968.getAnswer();
+        BOJ3109.getAnswer();
     }
 }
+
