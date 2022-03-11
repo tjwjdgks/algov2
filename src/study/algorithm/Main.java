@@ -1,6 +1,7 @@
 package study.algorithm;
 
 import study.algorithm.BOJ.*;
+import study.algorithm.PROGRAMMERS.kakao2022.six;
 import study.algorithm.PROGRAMMERS.kakao2022.two;
 
 public class Main {
