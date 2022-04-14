@@ -1,9 +1,18 @@
 package study.algorithm.BOJ;
 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+
 public class BOJ1107 {
     public static int minNum = Integer.MAX_VALUE , numInt;
     public static Set<String> set = IntStream.range(0,10).mapToObj(String::valueOf).collect(Collectors.toSet());
-    public static void getAnswer(){
+    public static void getAnswer() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         numInt = Integer.parseInt(br.readLine());
