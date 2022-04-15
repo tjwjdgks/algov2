@@ -7,7 +7,7 @@ import study.algorithm.PROGRAMMERS.kakao2022.two;
 public class Main {
 
     public static void main(String[] rgs) throws Exception {
-
+        BOJ1065.getAnswer();
     }
 }
 
