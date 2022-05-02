@@ -5,8 +5,9 @@ import study.algorithm.BOJ.*;
 
 public class Main {
     public static void main(String[] rgs) throws Exception {
-        BOJ17837 boj17837 = new BOJ17837();
-        boj17837.getAnswer();
+        System.out.println(-1%3);
+        //BOJ20057 boj20057= new BOJ20057();
+        //boj20057.getAnswer();
     }
 }
 
