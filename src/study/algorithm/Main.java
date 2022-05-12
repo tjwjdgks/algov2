@@ -7,8 +7,8 @@ import java.io.BufferedReader;
 
 public class Main {
     public static void main(String[] rgs) throws Exception {
-        BOJ16936 boj16936 = new BOJ16936();
-        boj16936.getAnswer();
+        BOJ2343 boj2343 = new BOJ2343();
+        boj2343.getAnswer();
     }
 }
 
