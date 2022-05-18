@@ -9,12 +9,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] rgs) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        ArrayList<String> lines = new ArrayList<>();
-        for (int i = 0; i < 4; i++) {
-            lines.add(reader.readLine());
-        }
-        System.out.println(lines);
+        BOJ12919 boj12919 = new BOJ12919();
+        boj12919.getAnswer();
     }
 }
 
