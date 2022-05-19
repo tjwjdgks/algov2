@@ -9,8 +9,8 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] rgs) throws Exception {
-        BOJ12919 boj12919 = new BOJ12919();
-        boj12919.getAnswer();
+        BOJ1952 boj1952 = new BOJ1952();
+        boj1952.getAnswer();
     }
 }
 
