@@ -1,4 +1,4 @@
-package study.algorithm.PROGRAMMERS.skilltest;
+package study.algorithm.PROGRAMMERS.skilltest.level1;
 
 
 public class LevelOne2 {
