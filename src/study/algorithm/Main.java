@@ -1,15 +1,12 @@
 package study.algorithm;
 
 
-import java.util.ArrayList;
-import study.algorithm.BOJ.BOJ1269;
-import study.algorithm.BOJ.BOJ25304;
-import study.algorithm.PROGRAMMERS.TestPersonalColor;
+import study.algorithm.PROGRAMMERS.daily.day1.Three;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        TestPersonalColor personality = new TestPersonalColor();
-        personality.solution(new String[]{"AN", "CF", "MJ", "RT", "NA"},new int[]{5, 3, 2, 7, 5});
+         Three three = new Three();
+         three.solution(new int[]{5, 4, 3, 2, 1});
     }
 }
 
