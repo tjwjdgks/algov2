@@ -1,4 +1,4 @@
-package study.algorithm.PROGRAMMERS.daily.day3;
+package study.algorithm.PROGRAMMERS.daily.evening;
 
 public class One {
     public String solution(String my_string, String letter) {

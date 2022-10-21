@@ -1,4 +1,4 @@
-package study.algorithm.PROGRAMMERS.daily.day2;
+package study.algorithm.PROGRAMMERS.daily.launch;
 
 public class One {
     public String solution(String X, String Y) {

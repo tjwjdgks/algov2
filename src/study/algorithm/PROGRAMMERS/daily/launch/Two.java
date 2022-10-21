@@ -1,4 +1,4 @@
-package study.algorithm.PROGRAMMERS.daily.day2;
+package study.algorithm.PROGRAMMERS.daily.launch;
 
 import java.util.HashMap;
 import java.util.LinkedList;

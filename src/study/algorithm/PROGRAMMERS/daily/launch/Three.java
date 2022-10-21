@@ -1,4 +1,4 @@
-package study.algorithm.PROGRAMMERS.daily.day1;
+package study.algorithm.PROGRAMMERS.daily.launch;
 
 import java.util.ArrayDeque;
 import java.util.Deque;

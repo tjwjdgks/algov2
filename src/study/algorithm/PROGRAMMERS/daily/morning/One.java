@@ -1,4 +1,4 @@
-package study.algorithm.PROGRAMMERS.daily.day1;
+package study.algorithm.PROGRAMMERS.daily.morning;
 
 public class One {
     public int solution(String[] spell, String[] dic) {
