@@ -1,13 +1,13 @@
 package study.algorithm;
 
 
-import study.algorithm.PROGRAMMERS.daily.launch.Four;
-import study.algorithm.PROGRAMMERS.daily.launch.Three;
+import study.algorithm.PROGRAMMERS.daily.evening.Three;
+
 
 public class Main {
     public static void main(String[] args) throws Exception {
-         Four four = new Four();
-         four.solution(2,1,20);
+         Three three = new Three();
+         three.solution(new int[]{1, 2, 1, 3, 1, 4, 1, 2});
     }
 }
 
