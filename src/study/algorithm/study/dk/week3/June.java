@@ -10,10 +10,45 @@ import java.util.Arrays;
  */
 public class June {
 
+
     public static boolean checkAnswer = false;
 
     public static int[][] answerSudoku = new int[9][9];
 
+    /**
+     * 처음 풀이 실패 코드
+     * 보완
+     * @param count
+     * @param sudoku
+     */
+    public static void dfs2(int count, int[][] sudoku){
+        if(checkAnswer) return;
+        while(count<81){
+            int y = count/9;
+            int x = count%9;
+            if(sudoku[y][x] == 0){
+                for(int i = 1;i<=9;i++){
+                    if(checkPossibleNumber(sudoku,y,x,i)) {
+                        sudoku[y][x] = i;
+                        dfs2(count + 1, sudoku);
+                    }
+                }
+                sudoku[y][x] = 0;
+                return;
+            }
+            count++;
+        }
+        if(checkAnswer == false){
+            checkAnswer = true;
+            copyArray(sudoku,answerSudoku);
+        }
+    }
+
+    /**
+     * 성공 코드
+     * @param count
+     * @param sudoku
+     */
     // 정답인 케이스만 주어짐
     public static void dfs(int count, int[][] sudoku){
         if(checkAnswer) return;
@@ -73,7 +108,7 @@ public class June {
         for(int i = 0; i<9;i++){
             sudoku[i] = Arrays.stream(br.readLine().split(" ")).mapToInt(s->Integer.parseInt(s)).toArray();
         }
-        dfs(0,sudoku);
+        dfs2(0,sudoku);
         StringBuffer sb = new StringBuffer();
         for(int i=0;i<9;i++){
             for(int j= 0; j<9; j++){
