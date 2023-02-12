@@ -5,6 +5,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
+/**
+ * 풀이 유형  dfs, bfs, dp
+ * 풀이
+ * - circle이 가능성있는 것들 for문 돌기
+ *     - dfs로 circle 찾는다. circle에 포함된 것을 기록
+ * - circle을 node를 queue에다 넣어서 bfs 돌림
+ * 걸린 시간 1
+ * 시간복잡도 N*N 예상 dp이용했으므로 n * for문 n
+ */
 public class Enzo {
 
     public static int[] check;
