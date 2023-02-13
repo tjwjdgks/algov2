@@ -13,6 +13,10 @@ import java.util.*;
  * - circle을 node를 queue에다 넣어서 bfs 돌림
  * 걸린 시간 1
  * 시간복잡도 N*N 예상 dp이용했으므로 n * for문 n
+ * vertex n-1
+ * edge n
+ * 완전히 연결되지 않을 때 n-1
+ * +1개의 선을 연결 할 수 있으므로 사이클
  */
 public class Enzo {
 
@@ -70,7 +74,9 @@ public class Enzo {
             array[secondNode].add(firstNode);
         }
         for(int i=1;i<=N;i++){
-            if(isCircle[i]) continue;
+            if(isCircle[i]) {
+                break;
+            }
             dfs(0,0,i,i);
             initTable();
         }
