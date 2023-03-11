@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-// for문 구현이 난해하면 재귀로 푸는 것도 좋은 방법
+// 반복문 구현이 난해하면 재귀로 푸는 것도 좋은 방법
 
 public class Enzo {
 
