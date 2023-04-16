@@ -3,10 +3,7 @@ package study.algorithm.study.dk.week11;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.StringTokenizer;
+import java.util.*;
 
 public class Henry {
 
@@ -15,24 +12,56 @@ public class Henry {
         StringTokenizer st = new StringTokenizer(br.readLine());
         int H = Integer.parseInt(st.nextToken());
         int W = Integer.parseInt(st.nextToken());
-        int [] array = Arrays.stream(br.readLine().split(" ")).mapToInt(i->Integer.parseInt(i)).toArray();
-        List<Integer> list = new ArrayList<>();
-        if(array[0]>array[1]) list.add(0);
-        for(int i=1;i<array.length-1;i++){
-            if(array[i]>array[i+1] && array[i]>array[i-1]) list.add(i);
+
+        if(W == 1){
+            System.out.println(0);
+            return;
         }
-        if(array[array.length-2]<array[array.length-1]) list.add(array.length-1);
-        int answer =0;
-        for(int i=0;i<list.size()-1;i++){
-            int start = list.get(i);
-            int end = list.get(i+1);
-            int minNum = Math.min(array[start],array[end]);
-            for(int j=start+1;j<end;j++){
-                answer += minNum - array[j];
+
+        int [] arr = Arrays.stream(br.readLine().split(" ")).mapToInt(i->Integer.parseInt(i)).toArray();
+        Queue<int[]> queue = new PriorityQueue<>((o1, o2) -> {
+            if(o1[1] == o2[1] ) return o1[0] - o2[0];
+            return o2[1] - o1[1];
+        });
+        for(int i=0;i<arr.length;i++){
+            queue.add(new int[]{i,arr[i]});
+        }
+        int answer = 0;
+        boolean [] check = new boolean[W];
+        int curStart = queue.poll()[0];
+        int curEnd = queue.poll()[0];
+        if(curStart>curEnd){
+            int temp = curStart;
+            curStart = curEnd;
+            curEnd = temp;
+        }
+        answer += checkBetweenAndPlusGap(arr,check,curStart,curEnd);
+        while(!queue.isEmpty()){
+            int [] curIndex = queue.poll();
+            if(check[curIndex[0]]) continue;
+            if(curStart>curIndex[0]){
+                answer += checkBetweenAndPlusGap(arr,check,curIndex[0],curStart);
+                curStart = curIndex[0];
+            }
+            else if(curEnd<curIndex[0]){
+                answer += checkBetweenAndPlusGap(arr,check,curEnd,curIndex[0]);
+                curEnd = curIndex[0];
             }
         }
         System.out.println(answer);
     }
+
+    private static int checkBetweenAndPlusGap(int[] arr, boolean[] check, int curStart, int curEnd) {
+        check[curStart] = true;
+        check[curEnd] = true;
+        int gap = Math.min(arr[curStart],arr[curEnd]);
+        int totalGap = 0;
+        for(int i=curStart+1;i<curEnd;i++){
+            totalGap += gap - arr[i];
+        }
+        return totalGap;
+    }
+
     public static void main(String []args) throws IOException {
         getAnswer();
     }
