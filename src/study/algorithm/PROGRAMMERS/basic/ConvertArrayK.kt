@@ -6,4 +6,5 @@ class ConvertArrayK {
         var answer: IntArray = arr.map{i -> if(k%2 !=0) i*k else i+k}.toIntArray()
         return answer
     }
+
 }
